@@ -1,0 +1,310 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic (CALLED IN NORMALIZE.CSS)
+	- Normalize
+	- Box sizing
+	- Media width
+# Base
+	- Typography
+	- Elements
+	- Links
+# Components
+	- Header
+	- Main
+	- Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Typography
+--------------------------------------------- */
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #282828;
+	background-color: #ffffff;
+	
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	margin: .5em 0;
+	font-size: 1.75rem;
+}
+
+h1 {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+/* Links
+--------------------------------------------- */
+a,
+a:visited { 
+	color: #008000;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: underline;
+}
+
+a:focus {
+	outline: 1px dotted;
+}
+
+.product-link{
+	background-color: #008000;
+	color: #fff;
+	padding: 10px;
+}	
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+
+.site-wrapper {
+	/* This is for very large screens */
+	max-width: 120rem;
+	margin: 0 auto;
+}
+
+/* Header
+--------------------------------------------- */
+.site-header {
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+	
+}
+
+.site-navigation {
+	padding: 0rem 1rem;
+	font-family: Georgia, Times, "Times New Roman", serif;
+	color: black;
+	display: inline-block;
+	text-align: center;
+	
+}
+
+.site-navigation a {
+	display: block;
+	padding: 1rem;
+	font-size: 1.25rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+
+/* START -- STYLES FOR MOBILE MENU */
+
+.site-navigation ul {
+	display: none;
+	position: absolute;
+	top: 4.5rem;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	background-color: #ffe6bf;
+}
+
+.menu-toggle {
+	display: block;
+	background-color: transparent;
+	border: 0;
+	padding: 1rem;
+}
+
+.menu-toggle:focus {
+	border: 0;
+	outline: 1px dotted;
+}
+
+.site-navigation.toggled ul {
+	display: block;
+}
+/* END -- STYLES FOR MOBILE MENU */
+
+
+@media (min-width: 43.75em) {
+
+	.menu-toggle {
+		display: none; 
+	}
+
+	.site-navigation {
+		padding: 1rem 1rem;
+	}
+
+	.site-navigation ul,
+	.site-navigation.toggled ul {
+		list-style-type:none;
+		display: flex;
+		flex-direction: row;
+		justify-content:flex-end;
+		background-color: transparent;
+
+		/* START - Remove Mobile Menu Styles */
+		position: relative;
+		top: 0;
+		/* END - Remove Mobile Menu Styles  */
+	}
+
+	.site-navigation a {
+		line-height: 4.5rem; /* Matches the height of the .site-logo: 6rem + 1rem + 1rem */
+		padding: 0 1rem;
+		text-transform: none;
+		color: black;
+	}
+
+}
+
+/* Main
+--------------------------------------------- */
+.about {
+	padding: 100px;
+	text-align: justify;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section a {
+    text-decoration: none;
+    color: lightcoral;
+}
+
+article img  {
+    width: 400px;
+    height: 400px;
+}
+
+
+.articles {
+	max-width: 40%;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.north-indian, .south-indian {
+	justify-content: center;
+	text-align: justify;
+	padding: 10px 100px;
+}
+
+.card {
+    width: 300px;
+    margin: 100px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+	display: grid;
+
+  }
+
+.card:hover {
+    transform: scale(1.05);
+  }
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+.card p {
+    font-size: 1em;
+    color: #555;
+  }
+
+.festivals{
+	padding: 0 100px ;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+/* Footer
+--------------------------------------------- */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+	position: static;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+@media (min-width: 50em) {
+	.site-footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 10px 10px 10px;
+		align-items: center;
+	}
+}	
