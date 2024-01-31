@@ -28,7 +28,6 @@ body {
 	line-height: 1.5;
 	color: #282828;
 	background-color: #ffffff;
-	
 }
 
 
@@ -44,7 +43,7 @@ h6 {
 }
 
 h1 {
-    padding-left: 1rem;
+    padding-left: 3rem;
     padding-top: 1rem;
 }
 
@@ -89,10 +88,9 @@ a:focus {
 /* Header
 --------------------------------------------- */
 .site-header {
-	background-color: white;
+	background-color: orange;
 	display: flex;
 	justify-content: space-between;
-	
 }
 
 .site-navigation {
@@ -101,7 +99,7 @@ a:focus {
 	color: black;
 	display: inline-block;
 	text-align: center;
-	
+	background-color: orange;
 }
 
 .site-navigation a {
@@ -179,7 +177,7 @@ a:focus {
 /* Main
 --------------------------------------------- */
 .about {
-	padding: 100px;
+	padding: 0 100px;
 	text-align: justify;
 }
 
@@ -221,16 +219,14 @@ article img  {
 }
 
 .card {
-    width: 300px;
-    margin: 100px;
-    padding: 15px;
+    width: 20%;
+    padding: 25px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-	display: grid;
-
-  }
+	
+  } 
 
 .card:hover {
     transform: scale(1.05);
@@ -238,7 +234,7 @@ article img  {
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -254,8 +250,73 @@ article img  {
     color: #555;
   }
 
+.site-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+	  "header"
+	  "content"
+	;
+}
+  
+.site-header {
+	grid-area: header;
+}
+  
+.foods {
+	padding: 0 100px;
+}
+  
+.appetizers,
+.main-course,
+.desserts {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 20px;
+	padding: 20px 0;
+}
+  
+.appetizers article,
+.main-course article,
+.desserts article {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	gap: 10px;
+	padding: 0 20px;
+}
+  
+.card-img-holder {
+	overflow: hidden;
+}
+  
+.image {
+	width: 100%;
+	height: auto;
+}
+
 .festivals{
-	padding: 0 100px ;
+	padding: 10px 100px ;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th, td {
+	padding: 10px;
+}
+
+.all {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	gap: 1rem;
+	padding: 40px 0;
 }
 
 form {
@@ -285,14 +346,17 @@ input[type="submit"]:hover {
     background-color: #555;
 }
 
+.credits {
+	padding: 0 100px;
+}
 
 /* Footer
 --------------------------------------------- */
 
 footer {
-    background-color: #333;
+    background-color: green;
     color: #fff;
-    padding: 10px;
+    padding: 40px 10px;
     text-align: center;
 	position: static;
 	bottom: 0;
