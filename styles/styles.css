@@ -187,7 +187,6 @@ nav ul {
     padding: 0;
 }
 
-
 nav a {
     text-decoration: none;
     color: #fff;
@@ -197,50 +196,6 @@ section a {
     text-decoration: none;
     color: lightcoral;
 }
-
-article img  {
-    width: 400px;
-    height: 400px;
-}
-
-
-.articles {
-	max-width: 40%;
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card {
-    width: 100%;
-    padding: 25px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  } 
-
-.card:hover {
-    transform: scale(1.05);
-  }
-
-.card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-
-.card h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-
-.card p {
-    font-size: 1em;
-    color: #555;
-  }
 
 .site-wrapper {
 	display: grid;
@@ -256,11 +211,61 @@ article img  {
 	grid-area: header;
 }
   
+/* Food page*/
+article img  {
+    width: 400px;
+    height: 400px;
+}
+
+
+.articles {
+	max-width: 40%;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Festival page */
+.card {
+    width: 100%;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+} 
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.festivals{
+	padding: 10px 25px ;
+}
+
+
 .foods {
 	padding: 16px;
 }
 
-  
 .card-img-holder {
 	overflow: hidden;
 }
@@ -270,12 +275,12 @@ article img  {
 	height: auto;
 }
 
-.festivals{
-	padding: 10px 25px ;
-}
-
+/* Table */
 table {
 	border-collapse: collapse;
+	text-align: left;
+	align-items: center;
+	width: 90%;
 }
 
 table, th, td {
@@ -286,11 +291,11 @@ th, td {
 	padding: 10px;
 }
 
-
-
+/* Form */
 form {
     max-width: 400px;
     margin: 0 auto;
+	padding: 0 16px;
 }
 
 label {
@@ -315,11 +320,17 @@ input[type="submit"]:hover {
     background-color: #555;
 }
 
+/* Credits */
 .credits {
-	padding: 0 25px;
+	padding: 0 16px;
+	margin: auto;
 }
 
+.contact h2 {
+	padding: 0 16px;
+}
 
+/* Desktop media tags */
 @media (min-width: 50em) {
 	  
 .appetizers {
@@ -340,6 +351,12 @@ input[type="submit"]:hover {
 .card {
 	width: 20%;
 }
+
+.credits {
+    
+    margin: auto;
+}
+
 }
 
 /* Footer

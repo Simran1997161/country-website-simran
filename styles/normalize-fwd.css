@@ -374,6 +374,17 @@ video {
   height: 75vh;
   display: block;
   object-fit: cover;
+  opacity: 0.75;
+}
+
+.text {
+	font-size: 40px;
+	font-weight: 40;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  font-family: 'Protest Revolution', sans-serif;
 }
 
 .screen-reader-text {
