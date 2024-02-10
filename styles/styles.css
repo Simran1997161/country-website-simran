@@ -39,12 +39,11 @@ h5,
 h6 {
 	font-family: Georgia, Times, "Times New Roman", serif;
 	margin: .5em 0;
-	font-size: 1.75rem;
+	font-size: 25px;
 }
 
 h1 {
-    padding-left: 3rem;
-    padding-top: 1rem;
+    padding-left: 16px;
 }
 
 p {
@@ -81,7 +80,7 @@ a:focus {
 
 .site-wrapper {
 	/* This is for very large screens */
-	max-width: 120rem;
+	max-width: 1920px;
 	margin: 0 auto;
 }
 
@@ -94,7 +93,7 @@ a:focus {
 }
 
 .site-navigation {
-	padding: 0rem 1rem;
+	padding: 0 16px;
 	font-family: Georgia, Times, "Times New Roman", serif;
 	color: black;
 	display: inline-block;
@@ -105,7 +104,7 @@ a:focus {
 .site-navigation a {
 	display: block;
 	padding: 1rem;
-	font-size: 1.25rem;
+	font-size: 22px;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -116,7 +115,7 @@ a:focus {
 .site-navigation ul {
 	display: none;
 	position: absolute;
-	top: 4.5rem;
+	top: 70px;
 	left: 0;
 	right: 0;
 	z-index: 2;
@@ -127,7 +126,7 @@ a:focus {
 	display: block;
 	background-color: transparent;
 	border: 0;
-	padding: 1rem;
+	padding: 16px;
 }
 
 .menu-toggle:focus {
@@ -148,7 +147,7 @@ a:focus {
 	}
 
 	.site-navigation {
-		padding: 1rem 1rem;
+		padding: 16px 16px;
 	}
 
 	.site-navigation ul,
@@ -166,8 +165,8 @@ a:focus {
 	}
 
 	.site-navigation a {
-		line-height: 4.5rem; /* Matches the height of the .site-logo: 6rem + 1rem + 1rem */
-		padding: 0 1rem;
+		line-height: 70px; /* Matches the height of the .site-logo: 6rem + 1rem + 1rem */
+		padding: 0 16px;
 		text-transform: none;
 		color: black;
 	}
@@ -177,8 +176,9 @@ a:focus {
 /* Main
 --------------------------------------------- */
 .about {
-	padding: 0 100px;
-	text-align: justify;
+	padding: 0 25px;
+	text-align: left;
+	margin: 50px 0;
 }
 
 nav ul {
@@ -211,21 +211,13 @@ article img  {
     justify-content: center;
 }
 
-
-.north-indian, .south-indian {
-	justify-content: center;
-	text-align: justify;
-	padding: 10px 100px;
-}
-
 .card {
-    width: 20%;
+    width: 100%;
     padding: 25px;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-	
   } 
 
 .card:hover {
@@ -265,26 +257,9 @@ article img  {
 }
   
 .foods {
-	padding: 0 100px;
+	padding: 16px;
 }
-  
-.appetizers,
-.main-course,
-.desserts {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-	gap: 20px;
-	padding: 20px 0;
-}
-  
-.appetizers article,
-.main-course article,
-.desserts article {
-	display: grid;
-	grid-template-rows: auto auto auto;
-	gap: 10px;
-	padding: 0 20px;
-}
+
   
 .card-img-holder {
 	overflow: hidden;
@@ -296,7 +271,7 @@ article img  {
 }
 
 .festivals{
-	padding: 10px 100px ;
+	padding: 10px 25px ;
 }
 
 table {
@@ -311,13 +286,7 @@ th, td {
 	padding: 10px;
 }
 
-.all {
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-	gap: 1rem;
-	padding: 40px 0;
-}
+
 
 form {
     max-width: 400px;
@@ -347,7 +316,30 @@ input[type="submit"]:hover {
 }
 
 .credits {
-	padding: 0 100px;
+	padding: 0 25px;
+}
+
+
+@media (min-width: 50em) {
+	  
+.appetizers {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 20px;
+	padding: 20px 0;
+}
+
+.all {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	gap: 48px;
+	padding: 40px 0;
+}
+
+.card {
+	width: 20%;
+}
 }
 
 /* Footer
@@ -358,7 +350,7 @@ footer {
     color: #fff;
     padding: 40px 10px;
     text-align: center;
-	position: static;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -370,5 +362,6 @@ footer {
 		justify-content: space-between;
 		padding: 20px 10px 10px 10px;
 		align-items: center;
+		margin-top: 100px;
 	}
 }	
